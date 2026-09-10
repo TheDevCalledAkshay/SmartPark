@@ -1,5 +1,7 @@
 import 'dotenv/config';
 import { createServer } from 'http';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -10,6 +12,8 @@ import authRouter from './routes/auth.js';
 import bookingsRouter from './routes/bookings.js';
 import { setIO } from './realtime/io.js';
 import { startSimulator } from './simulator/simulator.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const server = createServer(app); // http server that hosts both Express and Socket.IO
@@ -37,6 +41,19 @@ app.get('/api/health', (req, res) => {
 app.use('/api/lots', lotsRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/bookings', bookingsRouter);
+// --- Serve the built React app (production / Render) ---
+// Render builds the client first (client/dist), then starts this server,
+// which serves those static files and falls back to index.html for
+// client-side routes like /login or /bookings.
+const distDir = path.resolve(__dirname, '../../client/dist');
+app.use(express.static(distDir));
+// Express 5 removed '*' route syntax — use a middleware fallback instead
+app.use((req, res, next) => {
+  if (req.method !== 'GET' || req.path.startsWith('/api/')) return next();
+  res.sendFile(path.join(distDir, 'index.html'));
+});
+
+// --- Connect DB, then start everything ---
 
 // --- Connect DB, then start everything ---
 await connectDB();

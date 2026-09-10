@@ -1,9 +1,12 @@
 # Dependencies
 node_modules/
 
-# Environment variables
+# Environment variables (contains the DB password - never upload!)
 .env
 .env.local
+
+# Build output (Render rebuilds it)
+client/dist/
 
 # Logs
 *.log
