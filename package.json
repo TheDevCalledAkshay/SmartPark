@@ -1,0 +1,19 @@
+{
+  "name": "smart-park",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SmartPark - real-time smart parking platform (SIH 2026)",
+  "scripts": {
+    "start": "npm run clean -s && concurrently -n api,web -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run seed --prefix server",
+    "clean": "powershell -NoProfile -ExecutionPolicy Bypass -File kill-ports.ps1"
+  },
+  "keywords": [
+    "smart-parking",
+    "sih2026"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="theme-color" content="#f7faf8" />
+    <meta name="description" content="SmartPark — Find, reserve, and arrive at the right parking space." />
+    <title>SmartPark — Intelligent Parking</title>
+    <link rel="stylesheet" href="./src/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="app-shell">
+        <header class="topbar">
+          <a class="brand" href="#top" aria-label="SmartPark home">
+            <span class="brand-mark">P</span>
+            <span>smart<span>park</span></span>
+          </a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-link active" href="#nearby">Explore parking</a>
+            <a class="nav-link" href="#bookings">My bookings</a>
+            <a class="nav-link" href="#how-it-works">How it works</a>
+          </nav>
+          <div class="nav-actions">
+            <a class="operator-link" href="#how-it-works">For operators</a>
+            <button class="avatar-button" type="button" data-message="Welcome back, Ananya">AR</button>
+          </div>
+        </header>
+
+        <main id="top">
+          <section class="hero-section">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="eyebrow-dot"></span>Live across campus</div>
+              <h1>Parking,<br /><em>without</em> the circling.</h1>
+              <p>Know where you’re going before you get there. Find a spot, reserve it, and arrive with one less thing on your mind.</p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#nearby">Find my parking <span>-></span></a>
+                <a class="button button-ghost" href="#how-it-works">See how it works <span class="play-icon">></span></a>
+              </div>
+              <div class="hero-proof"><div class="proof-avatars"><span>SK</span><span>JM</span><span>DP</span><span>+</span></div><span><strong>2,400+</strong> drivers park smarter every week</span></div>
+            </div>
+            <div class="hero-art" role="img" aria-label="Aerial view of a connected campus parking lot">
+              <div class="hero-art-glow"></div>
+              <div class="arrival-card">
+                <div class="arrival-card-top"><span class="live-badge"><span></span>Live availability</span><span class="small-muted">updated 30 sec ago</span></div>
+                <div class="arrival-title"><span>18</span> spots near you</div>
+                <div class="arrival-route"><div class="route-line"><span class="route-pin">A</span><span class="route-dash"></span><span class="route-pin teal">P</span></div><div><strong>Central Campus · North Lot</strong><small>4 min walk · from ₹20/hr</small></div></div>
+                <a class="arrival-link" href="#nearby">View on map <span>-></span></a>
+              </div>
+              <div class="hero-tag tag-one">No searching. No stress.</div>
+              <div class="hero-tag tag-two">Reservation locked</div>
+            </div>
+          </section>
+
+          <section class="stats-strip" aria-label="SmartPark results">
+            <div class="stat-item"><span class="stat-icon coral">12</span><div><strong>12 min</strong><span>saved per trip</span></div></div>
+            <div class="stat-item"><span class="stat-icon teal">94</span><div><strong>94%</strong><span>availability accuracy</span></div></div>
+            <div class="stat-item"><span class="stat-icon lime">31</span><div><strong>31%</strong><span>less circulation</span></div></div>
+            <div class="stats-note">Built for campuses, communities &amp; cities</div>
+          </section>
+
+          <section class="explore-section" id="nearby">
+            <div class="section-heading"><div><div class="eyebrow dark"><span class="eyebrow-dot"></span>Good morning, Ananya</div><h2>Find your <em>better</em> spot.</h2><p>Parking near <strong>LPU Campus</strong> · Saturday, 20 September</p></div></div>
+            <div class="parking-grid">
+              <article class="parking-card"><div class="parking-thumb mint"><span class="thumb-zone">A</span><span class="thumb-count"><strong>18</strong> open</span></div><div class="parking-card-body"><span class="tiny-tag">Best match</span><h3>Central Campus · North Lot</h3><p>University Avenue, Gate 2</p><div class="card-meta"><span>0.4 km</span><span>84 spaces</span><strong>₹20<small>/hr</small></strong></div><button class="card-action" type="button" data-message="Central Campus · North Lot selected">Reserve now -&gt;</button></div></article>
+              <article class="parking-card"><div class="parking-thumb lavender"><span class="thumb-zone">B</span><span class="thumb-count"><strong>7</strong> open</span></div><div class="parking-card-body"><span class="tiny-tag">Covered</span><h3>Knowledge Hub Garage</h3><p>Library Road, Basement B1</p><div class="card-meta"><span>0.8 km</span><span>46 spaces</span><strong>₹30<small>/hr</small></strong></div><button class="card-action" type="button" data-message="Knowledge Hub Garage selected">Reserve now -&gt;</button></div></article>
+              <article class="parking-card"><div class="parking-thumb peach"><span class="thumb-zone">C</span><span class="thumb-count"><strong>31</strong> open</span></div><div class="parking-card-body"><span class="tiny-tag">Best value</span><h3>Residency Block Parking</h3><p>Maple Lane, Resident Entry</p><div class="card-meta"><span>1.2 km</span><span>120 spaces</span><strong>₹15<small>/hr</small></strong></div><button class="card-action" type="button" data-message="Residency Block Parking selected">Reserve now -&gt;</button></div></article>
+            </div>
+          </section>
+
+          <section class="how-section" id="how-it-works"><div class="section-heading centered"><div class="eyebrow dark"><span class="eyebrow-dot"></span>Simple by design</div><h2>From search to <em>parked.</em></h2><p>Everything you need to turn a parking guess into a confident arrival.</p></div><div class="steps-grid"><div class="step-card"><span class="step-number">01</span><h3>See what’s open</h3><p>Browse verified availability around your destination.</p></div><div class="step-card"><span class="step-number">02</span><h3>Lock your spot</h3><p>Choose a compatible space and reserve in a few taps.</p></div><div class="step-card"><span class="step-number">03</span><h3>Arrive with ease</h3><p>Follow directions straight to the right parking zone.</p></div></div></section>
+          <section class="closing-cta" id="bookings"><div><span class="eyebrow"><span class="eyebrow-dot"></span>Make the first move</span><h2>The best parking spot<br /><em>is the one you know.</em></h2></div><a class="button button-light" href="#nearby">Find my parking -&gt;</a></section>
+        </main>
+        <footer class="site-footer"><a class="brand brand-compact" href="#top"><span class="brand-mark">P</span><span>smart<span>park</span></span></a><div class="footer-copy">Smart parking for the way life moves.</div><div class="footer-links"><a href="#how-it-works">Support</a><span>© 2026 SmartPark</span></div></footer>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll("[data-message]").forEach((button) => {
+        button.addEventListener("click", () => window.alert(button.dataset.message));
+      });
+    </script>
+  </body>
+</html>

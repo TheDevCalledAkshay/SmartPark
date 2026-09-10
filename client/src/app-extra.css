@@ -1,0 +1,618 @@
+/* ---------- Buttons ---------- */
+.btn {
+  font: inherit;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+.btn:hover {
+  border-color: var(--accent);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+.btn.primary:hover {
+  background: #2f6fe0;
+}
+.btn.ghost {
+  background: transparent;
+}
+.btn.small {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+.btn.danger {
+  color: #fca5a5;
+  border-color: #7f1d1d;
+}
+.btn.danger:hover {
+  border-color: var(--red);
+}
+.btn.wide {
+  width: 100%;
+}
+
+/* ---------- Auth screen ---------- */
+.auth-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.auth-brand h1 {
+  font-size: 22px;
+}
+
+.auth-brand p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  padding: 5px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.auth-tabs button {
+  font: inherit;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.auth-tabs button.on {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-form label,
+.modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.auth-form input,
+.modal input,
+.modal select {
+  font: inherit;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 11px;
+}
+
+.auth-form input:focus,
+.modal input:focus,
+.modal select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.auth-error {
+  background: #7f1d1d;
+  color: #fecaca;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.auth-foot {
+  margin-top: 18px;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- Header user area ---------- */
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-name {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Lot panel (sidebar detail) ---------- */
+.lot-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lot-panel h2 {
+  font-size: 17px;
+}
+
+.lot-panel-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.btn.back {
+  align-self: flex-start;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.grid-title {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 6px;
+}
+
+.spot {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 9px 4px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.spot.available {
+  background: #14532d;
+  border-color: #16a34a;
+}
+
+.spot.available:hover {
+  background: #16a34a;
+}
+
+.spot.reserved {
+  background: #713f12;
+  border-color: #a16207;
+  cursor: not-allowed;
+}
+
+.spot.occupied {
+  background: #7f1d1d;
+  border-color: #b91c1c;
+  cursor: not-allowed;
+}
+
+.spot.maintenance {
+  background: #334155;
+  border-color: #475569;
+  cursor: not-allowed;
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--muted);
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.legend .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.dot.available {
+  background: #16a34a;
+}
+.dot.reserved {
+  background: #a16207;
+}
+.dot.occupied {
+  background: #b91c1c;
+}
+.dot.maintenance {
+  background: #475569;
+}
+
+/* ---------- Overlay & modal ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.72);
+  display: grid;
+  place-items: center;
+  z-index: 1200;
+  padding: 16px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 430px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-head h2 {
+  font-size: 17px;
+}
+
+.modal-head .x {
+  font: inherit;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.amount-row strong {
+  font-size: 18px;
+  color: var(--green);
+}
+
+/* ---------- Paying ---------- */
+.paying {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 0;
+}
+
+.spinner {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 4px solid var(--panel-2);
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Ticket ---------- */
+.ticket-head {
+  text-align: center;
+}
+
+.ticket-code {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
+  background: var(--panel-2);
+  border: 2px dashed var(--accent);
+  border-radius: 12px;
+  padding: 14px;
+  color: var(--accent);
+}
+
+.ticket-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  padding: 7px 2px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.ticket-row span {
+  color: var(--muted);
+}
+
+.ticket-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ---------- My bookings ---------- */
+.bookings-modal {
+  max-width: 500px;
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-item {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+}
+
+.booking-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-item p {
+  margin-top: 4px;
+}
+
+.chip {
+  font-size: 11px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.chip.on {
+  color: #86efac;
+  border-color: #16a34a;
+}
+
+.chip.pend {
+  color: #fcd34d;
+  border-color: #a16207;
+}
+
+.chip.off {
+  color: #fca5a5;
+  border-color: #b91c1c;
+}
+
+.booking-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.booking-actions > div {
+  display: flex;
+  gap: 6px;
+}
+
+/* ---------- Map controls & user location dot ---------- */
+.map-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.map-panel {
+  height: 100%;
+}
+
+.map-controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+}
+
+.map-btn {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.sp-user-wrapper {
+  background: transparent;
+  border: none;
+}
+
+.sp-user-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.35);
+  position: relative;
+}
+
+.sp-user-dot span {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 99, 235, 0.6);
+  animation: ping 1.6s ease-out infinite;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+/* Popup directions button */
+.sp-popup-btn {
+  font: inherit;
+  margin-top: 8px;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sp-popup-btn:hover {
+  background: #2f6fe0;
+}
+
+/* ---------- Live feed toasts ---------- */
+.live-feed {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1100;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--text);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  animation: toastIn 0.25s ease-out;
+}
+
+@keyframes toastIn {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.live-dot.idle {
+  background: var(--amber);
+  animation: none;
+}
+
+/* ---------- Light / dark theme system ---------- */
+/* Light theme matches the landing page palette (paper + teal) */
+.theme-light {
+  --bg: #f7faf8;
+  --panel: #ffffff;
+  --panel-2: #edf3f0;
+  --border: #dfe8e4;
+  --text: #10232a;
+  --muted: #5f7a80;
+  --accent: #0daba0;
+}
+
+.app {
+  background: var(--bg);
+}
+
+.auth-screen {
+  background: var(--bg);
+  font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+}
+
+.auth-card {
+  box-shadow: 0 18px 50px rgba(16, 35, 42, 0.08);
+}
+
+.theme-toggle {
+  white-space: nowrap;
+}
+
+.theme-toggle-fixed {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1300;
+}
